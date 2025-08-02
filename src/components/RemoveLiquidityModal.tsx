@@ -58,7 +58,7 @@ const RemoveLiquidityModal: React.FC<RemoveLiquidityModalProps> = ({
 
   // Check if approval is needed
   const needsApproval = lpTokensToRemoveWei ? 
-  BigInt(currentAllowance) < (BigInt(lpTokensToRemoveWei) + BigInt(10000)) : 
+  BigInt(currentAllowance) < BigInt(lpTokensToRemoveWei) : 
   true;
 
   // ALL CALLBACK HOOKS NEXT
